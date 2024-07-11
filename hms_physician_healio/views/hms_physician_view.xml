@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    <record id="view_physician_form" model="ir.ui.view">
+        <field name="name">physician.form</field>
+        <field name="model">hms.physician</field>
+        <field name="inherit_id" ref="acs_hms_base.view_physician_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="before">
+                <field name="latitude"/>
+                <field name="longitude"/>
+            </xpath>
+        </field>
+    </record>
+    </data>
+</odoo>
